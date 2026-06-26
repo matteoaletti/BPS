@@ -17,7 +17,6 @@ from typing import Any
 
 import bps.common.io.common_types.models as common_models
 import numpy as np
-from arepytools.timing.precisedatetime import PreciseDateTime
 from bps.common.io import common
 from bps.common.io.translate_common import (
     translate_bool,
@@ -38,6 +37,7 @@ from bps.transcoder.utils.time_conversions import (
     pdt_to_compact_date,
     pdt_to_compact_string,
 )
+from perseo_core.timing import PreciseDateTime
 
 
 # Handle an invalid L1c product.

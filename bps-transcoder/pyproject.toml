@@ -6,7 +6,7 @@ requires-python = ">=3.12"
 readme = "README.md"
 license = { file = "LICENSE.txt" }
 dependencies = [
-    "arepytools>=1.8.1",
+    "arepytools==1.9.0.dev0",
     "gdal>=3.10,<3.11",
     "netcdf4",
     "numpy",
@@ -15,6 +15,7 @@ dependencies = [
     "scipy>=1.10",
     "pyproj",
     "bps-common==4.4.4",
+    "perseo_core>=1.0.0",
 ]
 dynamic = ["version"]
 classifiers = [
