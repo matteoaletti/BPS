@@ -21,7 +21,6 @@ spec:
       default: false
       description: Propagate Windows unit test enablement to downstream project pipelines.
 ---
-
 stages:
   - subproject
   - integration_tests
@@ -36,15 +35,15 @@ workflow:
     - when: always
 
 variables:
-  L1_EXECUTABLES_LNX: "${EXECUTABLES_PATH}/L1_executables_lnx_2026-0623-fc6f088f-c159c2e3.tgz"
-  L1_EXECUTABLES_WIN: "${EXECUTABLES_PATH}/L1_executables_win_2026-0623-fc6f088f-c159c2e3.zip"
-  STACK_EXECUTABLES_LNX: "${EXECUTABLES_PATH}/Stack_executables_lnx_2026-0623-fc6f088f.tgz"
-  STACK_EXECUTABLES_WIN: "${EXECUTABLES_PATH}/Stack_executables_win_2026-0623-fc6f088f.zip"
+  L1_EXECUTABLES_LNX: "${EXECUTABLES_PATH}/L1_executables_lnx_2026-0625-ae9c8a64-c159c2e3.tgz"
+  L1_EXECUTABLES_WIN: "${EXECUTABLES_PATH}/L1_executables_win_2026-0625-ae9c8a64-c159c2e3.zip"
+  STACK_EXECUTABLES_LNX: "${EXECUTABLES_PATH}/Stack_executables_lnx_2026-0625-ae9c8a64.tgz"
+  STACK_EXECUTABLES_WIN: "${EXECUTABLES_PATH}/Stack_executables_win_2026-0625-ae9c8a64.zip"
 
 include:
   - project: "biomass/bps/ci-variables"
     ref: main
-    file: '/variables.yml'
+    file: "/variables.yml"
   - local: ".conda-packaging-ci.yml"
   - local: ".docker-ci.yml"
   - local: ".testplan-ci.yml"
@@ -89,7 +88,7 @@ include:
   stage: subproject
   variables:
     SUBPROJECT: $CI_JOB_NAME
-    BPS_ENABLE_WIN10_UNITTEST: '$[[ inputs.bps-enable-win10-unittest ]]'
+    BPS_ENABLE_WIN10_UNITTEST: "$[[ inputs.bps-enable-win10-unittest ]]"
   trigger:
     strategy: mirror
 
