@@ -13,7 +13,7 @@ Common
 from dataclasses import dataclass
 from enum import Enum
 
-from arepytools.timing.precisedatetime import PreciseDateTime
+from perseo_core.timing import PreciseDateTime
 
 
 class ProcessingModeType(Enum):

@@ -13,7 +13,6 @@ from dataclasses import dataclass
 from typing import Literal
 
 from arepytools.io import metadata
-from arepytools.timing.precisedatetime import PreciseDateTime
 from bps.common.io import common, common_types
 from bps.transcoder.io import common_annotation_l1
 from bps.transcoder.io import common_annotation_models_l1 as main_annotation_models
@@ -28,6 +27,7 @@ from bps.transcoder.utils.time_conversions import (
     pdt_to_compact_date,
     pdt_to_compact_string,
 )
+from perseo_core.timing import PreciseDateTime
 
 # Type conversions between L1 products and SAR products.
 SAR_TO_L1A_PRODUCT_TYPE = {"SLC": "SCS", "GRD": "DGM"}

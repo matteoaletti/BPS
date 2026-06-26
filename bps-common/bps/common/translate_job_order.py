@@ -13,10 +13,10 @@ General Job Order translation functions
 import logging
 from pathlib import Path
 
-from arepytools.timing.precisedatetime import PreciseDateTime
 from bps.common import Swath
 from bps.common.io import joborder_models
 from bps.common.joborder import DeviceResources, ProcessorConfiguration, TileProcessingParameters
+from perseo_core.timing import PreciseDateTime
 
 BIOMASS_PROCESSOR_VERSION = "04.44"
 """Expected processor version for all BIOMASS CPF processor job orders"""

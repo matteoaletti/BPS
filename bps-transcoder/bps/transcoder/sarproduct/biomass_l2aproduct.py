@@ -13,7 +13,6 @@ from glob import glob
 from pathlib import Path
 
 import numpy as np
-from arepytools.timing.precisedatetime import PreciseDateTime
 from bps.common.io.mph import get_mph_path
 from bps.transcoder.io import (
     common_annotation_models_l2,
@@ -30,6 +29,7 @@ from bps.transcoder.utils.time_conversions import (
     pdt_to_compact_date,
     pdt_to_compact_string,
 )
+from perseo_core.timing import PreciseDateTime
 
 
 class BIOMASSL2aProductStructure:
